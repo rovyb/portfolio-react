@@ -1,11 +1,9 @@
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import "./DirectoryPage.styles.scss";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { TransitionContext } from "../../contexts/TransitionContext.component";
 
 export const DirectoryPage = () => {
-  const {homeTransition} = useContext(TransitionContext)
   const [animatedLink, setAnimatedLink] = useState();
 
   const animateLink = (e) => {

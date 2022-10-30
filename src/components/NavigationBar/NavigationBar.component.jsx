@@ -15,6 +15,7 @@ export const NavigationBar = () => {
   useEffect(() => {
     setHomeTransition(false)
   }, [])
+  
   return (
     // <div className={isHome ? "closed" : "NavigationBarContainer"}>
     <motion.div
