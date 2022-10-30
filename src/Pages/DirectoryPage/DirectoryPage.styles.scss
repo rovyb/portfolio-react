@@ -1,0 +1,24 @@
+.DirectoryPageContainer {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 144px;
+    opacity: 0.5;
+  }
+  h2:hover {
+    opacity: 1;
+  }
+
+  .ProjectsLink {
+
+  }
+  .Animated {
+    transform: translateX(500px);
+    transition: transform 2s ease;
+    opacity: 1
+  }
+}
