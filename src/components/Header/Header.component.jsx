@@ -12,16 +12,18 @@ export const Header = ({ isMobile }) => {
         <a
           href="https://www.linkedin.com/in/rory-balducci-033a5b172/"
           target="_blank"
+          rel="noreferrer"
           className="headerLink"
         >
-          <img src={linkedinImage} className="headerLogo" />
+          <img src={linkedinImage} className="headerLogo" alt="LinkedIn Link" />
         </a>
         <a
           className="headerLink"
           href="https://github.com/rovyb"
+          rel="noreferrer"
           target="_blank"
         >
-          <img src={githubImage} className="headerLogo" />
+          <img src={githubImage} className="headerLogo" alt="GitHub Link" />
         </a>
       </div>
     </header>
