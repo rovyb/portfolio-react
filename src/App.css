@@ -1,40 +1,83 @@
 :root {
-  --font-small: 2rem;
-  --font-medium: 3rem;
-  --font-large: 6rem;
-  --font-xl: 7rem;
+  --font-xs: 0.75rem;
+  --font-small: 1rem;
+  --font-sm-md: 1.5rem;
+  --font-medium: 2rem;
+  --font-title-small: 2.5rem;
+  --font-title-medium: 3rem;
+  --font-large: 3.5rem;
+  --font-xl: 4rem;
 
   /*Spacing*/
+  --space-xs: 8px;
+  --space-xs-sm: 16px;
   --space-sm: 24px;
   --space-md: 48px;
   --space-lg: 60px;
-}
 
+  /*Border Radius*/
+  --border-radius: 4px;
 
-.maxWidthContainer {
-  width: 1280px;
-  height: 100%;
-  position: relative;
+  /*Button Sizing*/
+  --button-sm: 20px;
+  --button-md: 40px;
 }
 
 h1 {
-  font-size: var(--font-xl)
+  font-size: var(--font-xl);
 }
 
 h2 {
-  font-size: var(--font-large)
+  font-size: var(--font-large);
 }
 
 h3 {
-  font-size: var(--font-medium)
+  font-size: var(--font-medium);
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.8);
 }
 
 h4 {
-  font-size: var(--font-small)
+  font-size: var(--font-sm-md);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+h5 {
+  font-size: var(--font-small);
+  font-family: sans-serif;
+  text-transform: none;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.8);
+}
+
+p {
+  font-size: var(--font-small);
+  font-family: sans-serif;
+  text-transform: none;
+  line-height: 1.2;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.8);
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  
+}
+
+button {
+  font-family: inherit;
+  background-color: black;
+  outline: none;
+  border: none;
+  padding: var(--space-xs);
+  border-radius: var(--border-radius);
+  width: 100px;
+  letter-spacing: inherit;
+  color: white;
+  border: 1px white solid;
+}
+
+img {
+  pointer-events: none;
+}
+
+.paddingWrapper {
+  padding: 0 var(--space-sm);
 }

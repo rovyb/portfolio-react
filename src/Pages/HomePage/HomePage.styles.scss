@@ -1,35 +1,173 @@
+@keyframes expandText {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes expandLeftImage {
+  from {
+    transform: scale(0);
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes expandCenterImage {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes expandRightImage {
+  from {
+    transform: scale(0);
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .HomePageContainer {
-  height: 100%;
+  width: 100%;
+
+  .TitleContainer {
+    margin-bottom: var(--space-sm);
+    margin-top: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .LandingText {
+    margin-bottom: var(--space-sm);
+    width: 75ch;
+    align-content: center;
+    text-align: center;
+    animation: expandText 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .LandingImageContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+
+    .LandingImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      opacity: 0;
+    }
+  }
+}
+
+.LandingContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-
-  .TitleContainer {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .Name {
-      margin-bottom: var(--space-lg);
-    }
+  .LandingTitle {
+    animation: expandText 1500ms;
+    margin-bottom: var(--space-sm);
+    animation-fill-mode: forwards;
   }
 
-  .ScrollDownContainer {
-    height: min-content;
+  .LandingText:nth-of-type(1) {
+    animation-delay: 1000ms;
+  }
+
+  .LandingText:nth-of-type(2) {
+    animation-delay: 2000ms;
+  }
+
+  .LandingText:nth-of-type(3) {
+    animation-delay: 3500ms;
+  }
+
+  .LandingImage:nth-of-type(1) {
+    animation: expandLeftImage 1500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 4500ms;
+  }
+
+  .LandingImage:nth-of-type(2) {
+    animation: expandCenterImage 1500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 5500ms;
+  }
+
+  .LandingImage:nth-of-type(3) {
+    animation: expandRightImage 1500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 6500ms;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.MobileHomePageContainer {
+  width: 100%;
+
+  .TitleContainer {
+    margin-bottom: var(--space-sm);
+    margin-top: var(--space-lg);
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--space-md);
+    width: 100%;
+  }
 
-    .Caret {
-      transform: rotate(180deg);
-      text-align: center;
-      font-size: var(--font-medium);
-      margin-top: var(--space-sm);
+  .LandingText {
+    margin-bottom: var(--space-sm);
+    width: min(60ch, 100%);
+    align-content: center;
+    text-align: center;
+    animation: expandText 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  .LandingImageContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .LandingImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      opacity: 0;
     }
   }
 }

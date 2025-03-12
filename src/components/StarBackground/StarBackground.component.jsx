@@ -193,9 +193,5 @@ export const StarBackground = ({ children }) => {
     // === THREE.JS EXAMPLE CODE END ===
   }, []);
 
-  return (
-    <div className="starContainer" ref={mountRef}>
-      {children}
-    </div>
-  );
+  return <div ref={mountRef}>{children}</div>;
 };
