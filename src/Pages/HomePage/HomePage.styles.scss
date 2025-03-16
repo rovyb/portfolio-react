@@ -45,84 +45,6 @@
     opacity: 1;
   }
 }
-.HomePageContainer {
-  width: 100%;
-
-  .TitleContainer {
-    margin-bottom: var(--space-sm);
-    margin-top: var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .LandingText {
-    margin-bottom: var(--space-sm);
-    width: min(75ch, 100%);
-    align-content: center;
-    text-align: center;
-    animation: expandText 1500ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
-  .LandingImageContainer {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-
-    .LandingImage {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      opacity: 0;
-    }
-  }
-}
-
-.LandingContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .LandingTitle {
-    animation: expandText 1500ms;
-    margin-bottom: var(--space-sm);
-    animation-fill-mode: forwards;
-  }
-
-  .LandingText:nth-of-type(1) {
-    animation-delay: 1000ms;
-  }
-
-  .LandingText:nth-of-type(2) {
-    animation-delay: 2000ms;
-  }
-
-  .LandingText:nth-of-type(3) {
-    animation-delay: 3500ms;
-  }
-
-  .LandingImage:nth-of-type(1) {
-    animation: expandLeftImage 1500ms;
-    animation-fill-mode: forwards;
-    animation-delay: 4500ms;
-  }
-
-  .LandingImage:nth-of-type(2) {
-    animation: expandCenterImage 1500ms;
-    animation-fill-mode: forwards;
-    animation-delay: 5500ms;
-  }
-
-  .LandingImage:nth-of-type(3) {
-    animation: expandRightImage 1500ms;
-    animation-fill-mode: forwards;
-    animation-delay: 6500ms;
-  }
-}
 
 @keyframes up-down {
   0% {
@@ -136,22 +58,113 @@
   }
 }
 
-.MobileHomePageContainer {
+.HomePageContainer {
   width: 100%;
+}
+
+.LandingContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.TitleContainer {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.LandingTitle {
+  animation: expandText 1500ms;
+  margin-bottom: var(--space-sm);
+  animation-fill-mode: forwards;
+}
+
+.LandingText {
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-small);
+  width: min(80ch, 100%);
+  align-content: center;
+  text-align: center;
+  animation: expandText 1500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.LandingText:nth-of-type(1) {
+  animation-delay: 1000ms;
+}
+
+.LandingText:nth-of-type(2) {
+  animation-delay: 2000ms;
+}
+
+.LandingText:nth-of-type(3) {
+  animation-delay: 3500ms;
+}
+
+.LandingImageContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+}
+
+.LandingImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.LandingImage:nth-of-type(1) {
+  animation: expandLeftImage 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 4500ms;
+}
+
+.LandingImage:nth-of-type(2) {
+  animation: expandCenterImage 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 5500ms;
+}
+
+.LandingImage:nth-of-type(3) {
+  animation: expandRightImage 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 6500ms;
+}
+
+@media screen and (min-width: 1080px) {
+  .LandingContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   .TitleContainer {
-    margin-bottom: var(--space-sm);
-    margin-top: var(--space-lg);
+    margin-top: var(--space-xl);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
+  .LandingTitle {
+    animation: expandText 1500ms;
+    margin-bottom: var(--space-md);
+    animation-fill-mode: forwards;
+    font-size: var(--font-large);
+  }
+
   .LandingText {
-    margin-bottom: var(--space-sm);
-    font-size: 1rem !important;
-    width: min(60ch, 100%);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-medium);
+    width: min(80ch, 100%);
     align-content: center;
     text-align: center;
     animation: expandText 1500ms;
@@ -163,12 +176,13 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    max-width: 900px;
+  }
 
-    .LandingImage {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      opacity: 0;
-    }
+  .LandingImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    opacity: 0;
   }
 }

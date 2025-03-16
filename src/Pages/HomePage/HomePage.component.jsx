@@ -8,7 +8,7 @@ import reactImage from "../../assets/react.svg";
 export const HomePage = ({ isHome }) => {
   const isMobile = useIsMobile();
   return (
-    <div className={isMobile ? "MobileHomePageContainer" : "HomePageContainer"}>
+    <div className="HomePageContainer">
       <Header isMobile={isMobile} />
       <PaddingWrapper>
         <div className="LandingContainer">
@@ -20,10 +20,9 @@ export const HomePage = ({ isHome }) => {
               interface.
             </p>
             <p className="LandingText">
-              Most of my experience is in React or React Native, howeverI have
-              experience writing Swift (Watch, App), ML python scripts and model
-              building. Whatever is needed for what i'm inspired to build is
-              what I will learn. This website is designed in React, using scss
+              I have 5 years of experience using React and 2 years using React
+              Native. I've also used Swift, wrote Python scripts for ML
+              training, and more! This website is designed in React, using scss
               and React Three Fiber.
             </p>
             <p className="LandingText">

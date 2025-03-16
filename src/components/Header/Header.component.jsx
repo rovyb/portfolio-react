@@ -1,9 +1,10 @@
 import "../Header/Header.styles.scss";
 import linkedinImage from "../../assets/linkedin-svgrepo-com.svg";
 import githubImage from "../../assets/github-svgrepo-com.svg";
-export const Header = ({ isMobile }) => {
+
+export const Header = () => {
   return (
-    <header className={isMobile ? "MobileHeaderContainer" : "HeaderContainer"}>
+    <header className="HeaderContainer">
       <div>
         <h3 className="HeaderName">Rory Balducci</h3>
         <p className="HeaderName">Frontend Engineer</p>
